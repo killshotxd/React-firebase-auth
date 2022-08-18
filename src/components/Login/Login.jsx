@@ -63,7 +63,7 @@ const Login = () => {
             Login
           </button>
           <p>
-            Already Have an account?{" "}
+            Don't Have an account?{" "}
             <span>
               <Link to="/SignUp">Sign Up</Link>
             </span>
