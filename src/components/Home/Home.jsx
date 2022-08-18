@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../Firebase";
 import { signOut } from "firebase/auth";
-
+import styles from "./Home.module.css";
 const Home = (props) => {
   const [signOutMsg, setSignOutMsg] = useState("");
   const handleClick = () => {
@@ -13,31 +13,26 @@ const Home = (props) => {
 
   return (
     <div>
-      <div>
-        <h1>
+      <div className={styles.logger}>
+        <div className={styles.msg}>
+          <b>{signOutMsg}</b>
+
+          <h2>{props.name ? `Welcome - ${props.name}` : "Login please...."}</h2>
+        </div>
+
+        <button>
           <Link to="/login">Login</Link>
-        </h1>
+        </button>
         <br />
 
-        <h1>
+        <button>
           <Link to="/SignUp">SignUp</Link>
-        </h1>
+        </button>
+
+        <br />
+
+        <button onClick={handleClick}>SignOut</button>
       </div>
-
-      <br />
-
-      <button onClick={handleClick}>SignOut</button>
-
-      <br />
-      <br />
-      <br />
-
-      <b>{signOutMsg}</b>
-      <br />
-      <br />
-      <br />
-
-      <h2>{props.name ? `Welcome - ${props.name}` : "Login please...."}</h2>
     </div>
   );
 };

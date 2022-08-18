@@ -1,0 +1,38 @@
+.logger {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: #9900ff;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #aa2aff;
+}
+
+button:active {
+  color: #fff;
+}
+
+button a {
+  color: #fff;
+}
+
+.msg {
+  height: 5rem;
+  color: #aa2aff;
+}
